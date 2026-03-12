@@ -1,0 +1,29 @@
+{
+  "name": "pplx-retrieval-kernel",
+  "version": "2.4.1",
+  "description": "Neural retrieval pipeline: embedding, ANN search, cross-encoder reranking",
+  "author": "Perplexity AI Infrastructure Team",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/api/server.js",
+    "dev": "node --watch src/api/server.js",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --config jest.config.json",
+    "bench": "node benchmarks/retrieval_bench.js",
+    "embed": "node scripts/embed_corpus.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "uuid": "^9.0.0",
+    "p-limit": "^5.0.0",
+    "lru-cache": "^10.2.0",
+    "zod": "^3.22.4",
+    "@anthropic-ai/sdk": "^0.36.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
